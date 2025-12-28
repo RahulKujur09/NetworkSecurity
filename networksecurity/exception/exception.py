@@ -14,11 +14,11 @@ class NetworkSecurityException(Exception):
     def __str__(self):
         return ("Error occurred in the python script [{0}] in line number [{1}] and the error is [{2}]").format(self.file_name, self.lineno, self.error_message)
     
-if __name__ == "__main__":
-    try:
-        logging.info("Entered the try block")
-        a=1/0
-        print("this will not be printed", a)
-    except Exception as e:
-        logging.info("Entered the except block")
-        raise NetworkSecurityException(e, sys)
+# if __name__ == "__main__":
+#     try:
+#         logging.info("Entered the try block")
+#         a=1/0
+#         print("this will not be printed", a)
+#     except Exception as e:
+#         logging.info(NetworkSecurityException(e, sys))
+#         raise NetworkSecurityException(e, sys)
