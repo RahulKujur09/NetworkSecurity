@@ -8,4 +8,6 @@ catboost
 xgboost
 dill
 setuptools
--e .
+pymongo
+certifi
+# -e .

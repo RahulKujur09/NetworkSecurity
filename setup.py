@@ -1,8 +1,16 @@
 from setuptools import setup, find_packages
 
 def get_requirements(file_path):
-    HYPEN_E_DOT = "#-e ."
-    with open(file_path) as file_obj:
+    """the set.py file is an essential part of packing and distributing Python project. It is used by setuptools (or distutils in older Python versions) to define the configuration of your project, such as its metadata, dependencies, and more
+
+    Args:
+        file_path (_type_): N/A
+
+    Returns:
+        _type_: list[of requirements]
+    """
+    HYPEN_E_DOT = "-e ."
+    with open(file_path, "r") as file_obj:
         req = file_obj.readlines()
         req = [requires.strip() for requires in req]
     if HYPEN_E_DOT in req:
@@ -15,6 +23,6 @@ setup(
     version="0.0.1",
     author="Rahul Kujur",
     author_email="rahulkjr9435@gmail.com",
-    packages=find_packages("requirements.txt"),
+    packages=find_packages(),
     install_requires=get_requirements(file_path="requirements.txt")
 )
