@@ -2,3 +2,4 @@
 .env
 test.ipynb
 logs
+test_mongodb.py
