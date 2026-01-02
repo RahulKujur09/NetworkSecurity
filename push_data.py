@@ -18,6 +18,27 @@ import pymongo
 from networksecurity.exception.exception import NetworkSecurityException
 from networksecurity.logging.logger import logging
 
+"""
+This module handles data extraction and ingestion for the Network Security project.
+It is responsible for loading environment variables, reading CSV data files,
+transforming them into JSON-compatible records, and inserting the processed data
+into a MongoDB database.
+
+The `NetworkdataExtract` class provides methods to convert CSV files into JSON
+records and persist them into a specified MongoDB collection while ensuring
+robust exception handling and logging using custom exceptions.
+
+Args:
+    file_path (_type_): Path to the CSV file containing network security data.
+    records (_type_): List of JSON-like records derived from the CSV file.
+    database (_type_): Name of the MongoDB database.
+    collection (_type_): Name of the MongoDB collection.
+
+Returns:
+    _type_: Number of records successfully inserted into the MongoDB collection.
+"""
+
+
 class NetworkdataExtract():
     def __init__(self):
         try:

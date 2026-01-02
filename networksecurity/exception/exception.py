@@ -1,6 +1,24 @@
 import sys
 from networksecurity.logging.logger import logging
 
+
+"""
+This module defines a custom exception class used across the Network Security
+application to provide detailed and structured error reporting.
+
+The `NetworkSecurityException` class captures contextual information about an
+exception, including the file name and line number where the error occurred,
+making debugging and logging more informative and consistent across the project.
+
+Args:
+    error_message (_type_): The original exception message.
+    error_details (_type_): System exception details obtained using the `sys` module.
+
+Returns:
+    _type_: Formatted exception message with file name, line number, and error details.
+"""
+
+
 class NetworkSecurityException(Exception):
     def __init__(self,error_message, error_details):
         super().__init__(error_message)
